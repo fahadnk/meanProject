@@ -1,0 +1,121 @@
+<!-- <section class="vh-100">
+  <img src="bg-image.jpg" alt="" class="w-100 vh-100">
+<div class="container-fluid overflow-hidden">
+      <div class="row">
+        <h2>Login</h2>
+        <h4>Shopping Heaven</h4>
+        <div class="col-12" style="align-items: start;">
+      <mat-form-field hintLabel="Max 10 characters" appearance="fill" >
+        <label>Email</label>
+        <input matInput #input maxlength="10" placeholder="Ex. Nougat" formControlName="email">
+        <mat-hint align="end">{{input.value.length}}/10</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-12" style="align-items: start;" >
+      <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+        <label>Password</label>
+        <input matInput #input maxlength="10" placeholder="19Kil$87" formControlName="password">
+        <mat-hint align="end">{{input.value.length}}/10</mat-hint>
+      </mat-form-field>
+
+    </div>
+    </div>
+
+      <button mat-button color="primary">Login</button>
+      <button mat-button color="accent">Sign Up</button>
+
+</div>
+</section> -->
+
+<!-- <form >
+  <div id="login-container" class="mat-elevation-z8">
+
+      <h2 class="primary">Login</h2>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email address" formControlName="email" required>
+        <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+          Please enter email id
+        </mat-error>
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password"
+          required>
+        <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+          Please enter password
+        </mat-error>
+      </mat-form-field>
+
+      <mat-slide-toggle color="primary">
+        <span class="toggle-btn">Remember me</span>
+      </mat-slide-toggle>
+      <br>
+
+      <div>
+        <button mat-raised-button type="button" class="Sign-Up-btn" >Sign Up</button>
+        <button mat-raised-button type="submit" color="primary" class="Login-btn" (click)="onLogin()">Login</button>
+      </div>
+
+      <div class="footer-sec">
+        <br>
+        <br>
+        <hr>
+        <a class="primary">Forgot Password?</a>
+        <br>
+      </div>
+
+    </div>
+  </form> -->
+
+  <!-- <form>
+
+    <div class="mb-3 mt-3" style="margin-left: 30px;">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" style="width:20%" name="email" [(ngModel)]="email">
+    </div>
+    <div class="mb-3 mt-3" style="margin-left: 30px;">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" style="width:20%" name="password" [(ngModel)]="password">
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="margin-left: 130px;" (click)="loginUser()">Submit</button>
+  </form> -->
+
+  <section  class="section-center">
+    <div>
+      <div class="row justify-content-center h-100">
+          <div class="card my-auto shadow">
+              <div class="card-body px-5">
+                  <div class="text-center">
+                      <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+                  </div>
+                  <div class="text-center">
+                      <h2>Welcome</h2>
+                  </div>
+                  <p style="color: lightslategray; text-align: center;">
+                     Please enter your login
+                      </p>
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                      <div class="form-group mb-2">
+                          <input type="email" id="email" placeholder="Email" class="form-control" formControlName="email"
+                              name="email" />
+                      </div>
+                      <div class="form-group mb-2">
+                          <input type="password" id="password" placeholder="Password" class="form-control"
+                              formControlName="password" name="password" />
+                      </div>
+                      <br>
+                      <input type="submit" class="btn btn-primary w-100" value="Login" name="" >
+                  </form>
+              </div>
+              <div class="card-footer text-right">
+                  <span><a style="padding: 2px;" routerLink="./forget-passsword">Forgot Password</a></span>
+                  <span><a routerLink="./sign-up">New User</a></span>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
+  

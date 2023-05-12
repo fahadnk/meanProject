@@ -1,0 +1,60 @@
+<mat-dialog-content class="mat-typography">
+    <div class="products">
+      <div class="container">
+      <div class="card card-container" >
+          <img src="{{detailD.images}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{detailD.title}}</h5>
+            <p class="card-text">{{detailD.description}}}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-detailD">
+             
+              <span>Price :</span>
+              <span>{{detailD.price}}</span>
+              
+            </li>
+            <li class="list-group-detailD">
+              
+              <span>Discount :</span>
+              <span>{{detailD.discountPercentage}}</span>
+              
+              </li>
+            <li class="list-group-detailD">
+              
+              <span>Rating :</span>
+              <span>{{detailD.rating}}</span>
+            
+    
+              </li>
+            <li class="list-group-detailD">
+              
+              <span>Stock :</span>
+              <span>{{detailD.stock}}</span>
+              
+            </li>
+            <li class="list-group-detailD">
+              
+              <span>Brand :</span>
+              <span>{{detailD.brand}}</span>
+              
+            </li>
+            <li class="list-group-detailD">
+              
+              <span>Category :</span>
+              <span>{{detailD.category}}</span>
+              
+              </li>
+            
+          </ul>
+          <div class="thumb">
+            <img src="{{detailD.thumbnail}}" class="thumbnail-img" alt="...">
+            </div>
+        </div>
+      </div>
+      </div>
+      <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <!-- <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button> -->
+      </mat-dialog-actions>
+    </mat-dialog-content>

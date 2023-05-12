@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="products">
+  <div class="container">
+  <div class="card card-container" >
+      <img src="{{detail.images}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{detail.title}}</h5>
+        <p class="card-text">{{detail.description}}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-detail">
+         
+          <span>Price :</span>
+          <span>{{detail.price}}</span>
+          
+        </li>
+        <li class="list-group-detail">
+          
+          <span>Discount :</span>
+          <span>{{detail.discountPercentage}}</span>
+          
+          </li>
+        <li class="list-group-detail">
+          
+          <span>Rating :</span>
+          <span>{{detail.rating}}</span>
+        
+
+          </li>
+        <li class="list-group-detail">
+          
+          <span>Stock :</span>
+          <span>{{detail.stock}}</span>
+          
+        </li>
+        <li class="list-group-detail">
+          
+          <span>Brand :</span>
+          <span>{{detail.brand}}</span>
+          
+        </li>
+        <li class="list-group-detail">
+          
+          <span>Category :</span>
+          <span>{{detail.category}}</span>
+          
+          </li>
+        
+      </ul>
+      <div class="thumb">
+        <img src="{{detail.thumbnail}}" class="thumbnail-img" alt="...">
+        </div>
+    </div>
+  </div>
+  </div>
+<app-footer></app-footer>
