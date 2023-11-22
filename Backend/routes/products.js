@@ -1,9 +1,14 @@
 const router = require("express").Router();
 const verifyToken = require("./verifyAuthToken");
 const Products = require("../model/products-model");
+const Category = require("../model/category-model");
 
 // Add new Products
 router.post("/", verifyToken, async (req, res) => {
+    const category = Category.findById(req.body.category);
+    if(!category){
+        return  res.status(400).send('Invalid category');
+    }
     const products = new Products({
     title: req.body.title,
     description: req.body.description,
@@ -45,9 +50,27 @@ router.get("/:productId", verifyToken, async (req, res) => {
     }
 });
 
+// get specific category Products
+router.get("/", verifyToken, async (req, res) => {
+    try {
+        let filter = {};
+        if(req.query.categories){
+            filter = {category: req.query.categories.split(',')};
+        }
+        const products = await Products.find(filter).populate('category');
+        res.json(products);
+    } catch (error) {
+        res.json({message: error});
+    }
+});
+
 // update single Product
 router.put("/:productId", verifyToken, async (req, res) => {
     try {
+        const category = Category.findById(req.body.category);
+        if(!category){
+            return  res.status(400).send('Invalid category');
+        }
         const updatedProduct= {
             title: req.body.title,
             description: req.body.description,

@@ -12,6 +12,7 @@ mongoose.connect(process.env.DB_CONNECT);
 
 // Import Routes
 const Products = require("./routes/products");
+const Categories = require("./routes/category");
 const userRoutes = require("./routes/users");
 
 // middlewares
@@ -20,6 +21,7 @@ app.use(cors());
 
 // Route Middle wares
 app.use("/api/products", Products);
+app.use("/api/categories", Categories);
 app.use("/api/user", userRoutes);
 
 app.listen(4000, () => console.log("Api Server Started"));

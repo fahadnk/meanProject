@@ -12,6 +12,7 @@ import {LoginService } from './login.service';
 import {MyLoginModule} from '../app/LoginComponents/my-login/my-login.module';
 import { HttpCallServiceService } from './HttpCallService/http-call-service.service';
 import { HttpInterceptorService } from './http-interceptor.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HttpInterceptorService } from './http-interceptor.service';
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
+    MatIconModule,
     HttpClientModule,
     MyProuctModule,
     MyLoginModule

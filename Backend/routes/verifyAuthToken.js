@@ -9,8 +9,7 @@ const verifyToken = (req, res, next) => {
         req.user = verified;
         next();
     } catch (error) {
-        // error message should be Shown
-        res.status(400).send("Invalid Token");
+        res.status(400).send(error);
     }
 };
 

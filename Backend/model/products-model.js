@@ -1,16 +1,34 @@
 const mongoose = require("mongoose");
 
-// creating Schema for DB
+// creating product Schema for DB
 const productsSchema = new mongoose.Schema({
-    title: String,
+    title:{
+        type: String,
+        required:true
+    },
     description: String,
-    price: Number,
+    price:{
+        type: Number,
+        required: true
+    },
     discountPercentage: Number,
     rating: Number,
-    stock: Number,
+    stock: {
+        type: Number,
+        required: true,
+        min: 0,
+        max:500
+    },
     brand: String,
-    category: String,
-    thumbnail: String,
+    thumbnail: {
+        type: String,
+        required: true
+    },
+    category:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'Category',
+        required:true
+    },
     images:[String]
 });
 
