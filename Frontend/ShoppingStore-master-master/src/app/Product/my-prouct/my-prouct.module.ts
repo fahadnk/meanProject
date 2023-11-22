@@ -8,8 +8,9 @@ import { MyProuctRoutingModule } from './my-prouct-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { DialogueboxComponent } from '../dialoguebox/dialoguebox.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 
 @NgModule({
@@ -26,8 +27,8 @@ import { DialogueboxComponent } from '../dialoguebox/dialoguebox.component';
     ReactiveFormsModule,
     MatIconModule,
     MatCardModule,
-    MatDialogModule
-
+    MatDialogModule,
+    MatAutocompleteModule
   ]
 })
 export class MyProuctModule { }
